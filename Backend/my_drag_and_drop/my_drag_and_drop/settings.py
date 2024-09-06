@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p_p&9ez%sr-#@19xzos^)qe(!_maph^cz=oy*xu!(@!cu0mdiy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','drag-and-drop-webscraper-with-llm.onrender.com']
 
 
 # Application definition
