@@ -85,7 +85,7 @@ function DragAndDrop() {
 
     const handleSubmit = async (url,nodeId) => {
         try{
-            const response = await axios.get('http://localhost:8000/scrapper',{params: { url }})
+            const response = await axios.get('https://drag-and-drop-webscraper-with-llm.onrender.com/scrapper',{params: { url }})
             const output = response.data.message
             setNodeOutputs((prevOutputs) => ({ ...prevOutputs, [nodeId]: output }));
         }catch (error) {
@@ -94,8 +94,8 @@ function DragAndDrop() {
     }
      
     const initialNodes = [
-      { id:'1', type: 'webScrapper', data: { label: 'Web Scrapper', image: "src/assets/blackweb.svg", handleSubmit } },
-      { id:'2', type: 'summary', data: { label: 'Summary', image: "src/assets/black.svg" } },
+      { id:'1', type: 'webScrapper', data: { label: 'Web Scrapper', image: "./src/assets/blackweb.svg", handleSubmit } },
+      { id:'2', type: 'summary', data: { label: 'Summary', image: "./src/assets/black.svg" } },
     ];
     
     const nodeTypes = {
@@ -111,9 +111,9 @@ function DragAndDrop() {
 return (
         <>
             <div className="nodes">
-                <img id='cloud' src="src/assets/cloud.svg"/>
+                <img id='cloud' src="./src/assets/cloud.svg"/>
                 {initialNodes.map((node)=>{
-                    return <Node key={node.id} id={node.id} logo={node.data.image === "src/assets/blackweb.svg" ?  "src/assets/web.svg" : "src/assets/summary.svg"} name={node.data.label}/>
+                    return <Node key={node.id} id={node.id} logo={node.data.image === "./src/assets/blackweb.svg" ?  "./src/assets/web.svg" : ".//assets/summary.svg"} name={node.data.label}/>
                 })}
             </div>
             <div ref={drop} className="workplace">
